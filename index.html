@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>My Website</title>
+
+<style>
+body{
+    background:#111;
+    color:#fff;
+    font-family: Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.box{
+    background:#222;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    width:300px;
+}
+input,button{
+    width:90%;
+    padding:10px;
+    margin:8px 0;
+}
+button{
+    background:#00e5ff;
+    border:none;
+}
+.hidden{display:none;}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<div id="step1">
+<button onclick="next1()">নাম লিখুন</button>
+</div>
+
+<div id="step2" class="hidden">
+<input id="name" placeholder="আপনার নাম">
+<button onclick="next2()">Next</button>
+</div>
+
+<div id="step3" class="hidden">
+<input id="email" placeholder="আপনার Gmail">
+<button onclick="next3()">Next</button>
+</div>
+
+<div id="step4" class="hidden">
+<p>তুমি কি আমাদের সম্পর্কে জানতে চাও?</p>
+<button onclick="next4()">হ্যাঁ</button>
+</div>
+
+<div id="step5" class="hidden">
+<p>
+আসলে মূলত আমাদের লিংক গুলো অনলাইনে থাকার কারণে ওগুলো ফেল করছে<br><br>
+ফলে তোমরা লিংকে থেকে ভিডিও এনিমেটেড গুলো দেখতে পারছ না<br><br>
+আমি খুবই দুঃখিত<br><br>
+খুব দ্রুতই এর একটি সমাধান হবে<br><br>
+এ বিষয়ে বিস্তারিত জানতে এখনই কল করো<br>
+<b>০১৯০৬১৭২৭১৭</b>
+</p>
+</div>
+
+</div>
+
+<script>
+function next1(){
+step1.style.display="none";
+step2.style.display="block";
+}
+function next2(){
+if(name.value==""){alert("নাম লিখুন");return;}
+step2.style.display="none";
+step3.style.display="block";
+}
+function next3(){
+if(email.value==""){alert("Gmail লিখুন");return;}
+step3.style.display="none";
+step4.style.display="block";
+}
+function next4(){
+step4.style.display="none";
+step5.style.display="block";
+}
+</script>
+
+</body>
+</html>
